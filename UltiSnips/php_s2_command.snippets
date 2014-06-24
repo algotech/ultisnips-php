@@ -3,13 +3,13 @@ priority -50
 snippet sfcommandca "Symfony2 / Command / Command class (container aware)" b
 <?php
 
-namespace ${5:`!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`};
+namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class ${2:`!p snip.rv = snip.basename or "CommandClass"`} extends ContainerAwareCommand
+class `!p snip.rv = snip.basename or "CommandClass"` extends ContainerAwareCommand
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ class ${2:`!p snip.rv = snip.basename or "CommandClass"`} extends ContainerAware
     protected function configure()
     {
         \$this
-            ->setName('${3:default:command}')
-            ->setDescription('${4:Default description}')
+            ->setName('${1:default:command}')
+            ->setDescription('${2:Default description}')
             ;
     }
 
@@ -35,13 +35,13 @@ endsnippet
 snippet sfcommand "Symfony2 / Command / Command class" b
 <?php
 
-namespace ${5:`!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`};
+namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class ${2:`!p snip.rv = snip.basename or "CommandClass"`} extends Command
+class `!p snip.rv = snip.basename or "CommandClass"` extends Command
 {
     /**
      * {@inheritdoc}
@@ -49,8 +49,8 @@ class ${2:`!p snip.rv = snip.basename or "CommandClass"`} extends Command
     protected function configure()
     {
         \$this
-            ->setName('${3:default:command}')
-            ->setDescription('${4:Default description}')
+            ->setName('${1:default:command}')
+            ->setDescription('${2:Default description}')
             ;
     }
 
