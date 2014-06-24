@@ -1,0 +1,42 @@
+priority -50
+
+snippet sfcontroller "Symfony2 / Controller / Controller class" b
+<?php
+
+namespace ${6:`!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`};
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+
+class ${2:`!p snip.rv = snip.basename or "ControllerClass"`} extends Controller
+{
+    public function ${3:index}Action(${4:Request $request})
+    {
+		${0}
+        return \$this->render('${5:$3}.html.twig');
+    }
+}
+endsnippet
+
+snippet sfcontrollera "Symfony2 / Controller / Controller class (annotated)" b
+<?php
+
+namespace ${9:`!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`};
+
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+
+class ${2:`!p snip.rv = snip.basename or "ControllerClass"`} extends Controller
+{
+    /**
+     * @Route("${3:/}"${4:, name="${5}"})
+     * @Template(${6})
+     */
+    public function ${7:index}Action(${8:Request $request})
+    {
+        ${0}
+    }
+}
+endsnippet
