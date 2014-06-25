@@ -1,0 +1,57 @@
+priority -50
+
+snippet sfrepository "Symfony2 / Doctrine / Repository" b
+<?php
+
+namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
+
+use Doctrine\ORM\EntityRepository;
+
+class `!p snip.rv = snip.basename or "RepositoryClass"` extends EntityRepository
+{${0}
+}
+endsnippet
+
+snippet sfentity "Symfony2 / Doctrine / Entity" b
+<?php
+
+namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * @ORM\Entity(${1:repositoryClass="${2}"})
+ * @ORM\Table(name="${3}")
+ */
+class `!p snip.rv = snip.basename or "EntityClass"`
+{
+    /**
+     * @ORM\Id()
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected \$id;${0}
+}
+endsnippet
+
+snippet sfcolumn "Symfony2 / Doctrine / Column" b
+/**
+ * @ORM\Column(type="${2:type}"${3:})
+ */
+protected \$${1:name};${0}
+endsnippet
+
+snippet sfotm "Symfony2 / Doctrine / OneToMany column" b
+/**
+ * @ORM\OneToMany(targetEntity="${2:Entity}", mappedBy="${3:property}")
+ */
+protected \$${1:name};${0}
+endsnippet
+
+snippet sfmto "Symfony2 / Doctrine / ManyToOne column" b
+/**
+ * @ORM\ManyToOne(targetEntity="${2:Entity}", reversedBy="${3:property}")
+ */
+protected \$${1:name};${0}
+endsnippet
