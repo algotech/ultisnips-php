@@ -12,8 +12,11 @@ class `!p snip.rv = snip.basename or "ControllerClass"` extends Controller
 {
     public function ${1:index}Action(${2:Request $request})
     {
-		${0}
-        return \$this->render('${3:$1}.html.twig');
+        ${0}
+        return \$this->render(
+		    '${3:Bundle:Folder:}${4:$1}.html.twig',
+            array(${5})
+        );
     }
 }
 endsnippet
@@ -38,5 +41,27 @@ class `!p snip.rv = snip.basename or "ControllerClass"` extends Controller
     {
         ${0}
     }
+}
+endsnippet
+
+snippet sfconac "Symfony2 / Controller / Action" b
+public function ${1:index}Action(${2:Request $request})
+{
+	${0}
+    return \$this->render(
+	    '${3:Bundle:Folder:}${4:$1}.html.twig',
+        array(${5})
+    );
+}
+endsnippet
+
+snippet sfconacan "Symfony2 / Controller / Action (annotated)" b
+/**
+ * @Route("${1:/}"${2:, name="${3}"})
+ * @Template(${4})
+ */
+public function ${5:index}Action(${6:Request $request})
+{
+    ${0}
 }
 endsnippet
