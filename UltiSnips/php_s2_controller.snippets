@@ -1,6 +1,6 @@
 priority -50
 
-snippet sfcon "Symfony2 / Controller / Controller class" b
+snippet sfcontroller "Symfony2 / Controller / Controller class" b
 <?php
 
 namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
@@ -21,7 +21,7 @@ class `!p snip.rv = snip.basename or "ControllerClass"` extends Controller
 }
 endsnippet
 
-snippet sfconan "Symfony2 / Controller / Controller class (annotated)" b
+snippet sfcontrollera "Symfony2 / Controller / Controller class (annotated)" b
 <?php
 
 namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
@@ -44,7 +44,7 @@ class `!p snip.rv = snip.basename or "ControllerClass"` extends Controller
 }
 endsnippet
 
-snippet sfconac "Symfony2 / Controller / Action" b
+snippet sfaction "Symfony2 / Controller / Action" b
 public function ${1:index}Action(${2:Request $request})
 {
 	${0}
@@ -55,7 +55,7 @@ public function ${1:index}Action(${2:Request $request})
 }
 endsnippet
 
-snippet sfconacan "Symfony2 / Controller / Action (annotated)" b
+snippet sfactiona "Symfony2 / Controller / Action (annotated)" b
 /**
  * @Route("${1:/}"${2:, name="${3}"})
  * @Template(${4})
