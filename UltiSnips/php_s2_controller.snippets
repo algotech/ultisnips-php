@@ -14,8 +14,8 @@ class `!p snip.rv = snip.basename or "ControllerClass"` extends Controller
     {
         ${0}
         return \$this->render(
-		    '${3:Bundle:Folder:}${4:$1}.html.twig',
-            array(${5})
+		    '${3:Bundle}:${4:Folder}:${5:$1}.html.twig',
+            array(${6})
         );
     }
 }
@@ -47,10 +47,10 @@ endsnippet
 snippet sfaction "Symfony2 / Controller / Action" b
 public function ${1:index}Action(${2:Request $request})
 {
-	${0}
+    ${0}
     return \$this->render(
-	    '${3:Bundle:Folder:}${4:$1}.html.twig',
-        array(${5})
+        '${3:Bundle}:${4:Folder}:${5:$1}.html.twig',
+        array(${6})
     );
 }
 endsnippet
@@ -64,4 +64,28 @@ public function ${5:index}Action(${6:Request $request})
 {
     ${0}
 }
+endsnippet
+
+snippet sfrender "Symfony2 / Controller / Render"
+\$this->render(
+    '${1:Bundle}:${2:Folder}:${3:template}.html.twig',
+    array(${4})
+);
+endsnippet
+
+snippet sfforward "Symfony2 / Controller / Forward"
+\$this->forward(
+    '${1:Bundle}:${2:Controller}:${3:action}',
+    array(${4})
+);
+endsnippet
+
+snippet sfredirect "Symfony2 / Controller / Redirect"
+\$this->redirect(
+    \$this->generateUrl(
+        '${1:route}',
+		array(${2})
+	)${3:,
+	code}
+);
 endsnippet
