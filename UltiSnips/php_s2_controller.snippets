@@ -1,6 +1,6 @@
 priority -50
 
-snippet sfcontroller "Symfony2 / Controller / Controller class" b
+snippet sfcon "Symfony2 / Controller / Controller class" b
 <?php
 
 namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
@@ -18,7 +18,7 @@ class `!p snip.rv = snip.basename or "ControllerClass"` extends Controller
 }
 endsnippet
 
-snippet sfcontrollera "Symfony2 / Controller / Controller class (annotated)" b
+snippet sfconan "Symfony2 / Controller / Controller class (annotated)" b
 <?php
 
 namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;

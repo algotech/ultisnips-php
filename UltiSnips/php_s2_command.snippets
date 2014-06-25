@@ -1,6 +1,6 @@
 priority -50
 
-snippet sfcommandca "Symfony2 / Command / Command class (container aware)" b
+snippet sfcomca "Symfony2 / Command / Command class (container aware)" b
 <?php
 
 namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
@@ -32,7 +32,7 @@ class `!p snip.rv = snip.basename or "CommandClass"` extends ContainerAwareComma
 }
 endsnippet
 
-snippet sfcommand "Symfony2 / Command / Command class" b
+snippet sfcom "Symfony2 / Command / Command class" b
 <?php
 
 namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
