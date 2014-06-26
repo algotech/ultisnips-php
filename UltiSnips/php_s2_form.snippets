@@ -1,0 +1,42 @@
+priority -50
+
+snippet sfform "Symfony2 / Form / Form Type" b
+<?php
+
+namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
+
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+
+class `!p snip.rv = snip.basename or "FormTypeClass"` extends AbstractType
+{
+    /**
+     * {@inheritdoc}
+     */
+    public function buildForm(FormBuilderInterface \$builder, array \$options)
+    {
+        \$builder
+            ->add(${0}
+        ;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setDefaultOptions(OptionsResolverInterface \$resolver)
+    {
+        \$resolver->setDefaults(array(
+            'data_class' => ${2:null},
+        ));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getName()
+    {
+        return '${1:form_name}';
+    }
+}
+endsnippet
