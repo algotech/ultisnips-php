@@ -1,6 +1,6 @@
 priority -50
 
-snippet sftwigextension "Symfony2 / Teig / Extension Class" b
+snippet sftwigextension "Symfony2 / Twig / Extension Class" b
 <?php
 
 namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
@@ -19,14 +19,6 @@ class `!p snip.rv = snip.basename or "TwigExtensionClass"` extends \Twig_Extensi
      * {@inheritdoc}
      */
     public function getFunctions()
-    {
-        return array();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getTests()
     {
         return array();
     }
