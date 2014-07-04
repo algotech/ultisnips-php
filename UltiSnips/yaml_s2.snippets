@@ -1,0 +1,10 @@
+priority -50
+
+snippet sfroute "Symfony2 / YAML / Route" b
+${1:route_name}:
+    path:      ${2:/}
+    defaults:
+        _controller: ${3:Bundle:Controller:action}
+    requirements:
+        _method: ${4:GET|POST}
+endsnippet
