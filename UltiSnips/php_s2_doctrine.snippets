@@ -42,6 +42,27 @@ snippet sfcolumn "Symfony2 / Doctrine / Column" b
 protected \$${1:name};${0}
 endsnippet
 
+snippet sfotou "Symfony2 / Doctrine / OneToOne unidirectional column" b
+/**
+ * @ORM\OneToOne(targetEntity="${2:Entity}")
+ */
+protected \$${1:name};${0}
+endsnippet
+
+snippet sfoto "Symfony2 / Doctrine / OneToOne owner column" b
+/**
+ * @ORM\OneToOne(targetEntity="${2:Entity}", inversedBy="${3:property}")
+ */
+protected \$${1:name};${0}
+endsnippet
+
+snippet sfotoi "Symfony2 / Doctrine / OneToOne inverse column" b
+/**
+ * @ORM\OneToOne(targetEntity="${2:Entity}", mappedBy="${3:property}")
+ */
+protected \$${1:name};${0}
+endsnippet
+
 snippet sfotm "Symfony2 / Doctrine / OneToMany column" b
 /**
  * @ORM\OneToMany(targetEntity="${2:Entity}", mappedBy="${3:property}")
@@ -51,7 +72,37 @@ endsnippet
 
 snippet sfmto "Symfony2 / Doctrine / ManyToOne column" b
 /**
- * @ORM\ManyToOne(targetEntity="${2:Entity}", reversedBy="${3:property}")
+ * @ORM\ManyToOne(targetEntity="${2:Entity}", inversedBy="${3:property}")
+ */
+protected \$${1:name};${0}
+endsnippet
+
+snippet sfmtou "Symfony2 / Doctrine / ManyToOne unidirectional column" b
+/**
+ * @ORM\ManyToOne(targetEntity="${2:Entity}")
+ */
+protected \$${1:name};${0}
+endsnippet
+
+snippet sfmtmu "Symfony2 / Doctrine / ManyToMany unidirectional column" b
+/**
+ * @ORM\ManyToMany(targetEntity="${2:Entity}")
+ * @ORM\JoinTable(name="${3:}")
+ */
+protected \$${1:name};${0}
+endsnippet
+
+snippet sfmtm "Symfony2 / Doctrine / ManyToMany owner column" b
+/**
+ * @ORM\ManyToMany(targetEntity="${2:Entity}", inversedBy="${3:property}")
+ * @ORM\JoinTable(name="${4:}")
+ */
+protected \$${1:name};${0}
+endsnippet
+
+snippet sfmtmi "Symfony2 / Doctrine / ManyToMany inverse column" b
+/**
+ * @ORM\ManyToMany(targetEntity="${2:Entity}", mappedBy="${3:property}")
  */
 protected \$${1:name};${0}
 endsnippet
