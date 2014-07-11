@@ -3,7 +3,7 @@ priority -50
 snippet sftwigextension "Symfony2 / Twig / Extension Class" b
 <?php
 
-namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\l+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
+namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
 
 class `!p snip.rv = snip.basename or "TwigExtensionClass"` extends \Twig_Extension
 {
