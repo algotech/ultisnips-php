@@ -1,0 +1,23 @@
+priority -50
+
+snippet sfclass "Symfony2 / Class" b
+<?php
+
+namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
+
+class `!p snip.rv = snip.basename or "ClassName"` ${1}
+{
+	${0}
+}
+endsnippet
+
+snippet sfinterface "Symfony2 / Interface" b
+<?php
+
+namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
+
+interface `!p snip.rv = snip.basename or "InterfaceName"` ${1}
+{
+	${0}
+}
+endsnippet
