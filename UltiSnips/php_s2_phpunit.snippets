@@ -1,0 +1,12 @@
+priority -50
+
+snippet sftest "Symfony2 / PHPUnit / Test Case" b
+<?php
+
+namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
+
+class `!p snip.rv = snip.basename or "ClassName"` extends \PHPUnit_Framework_TestCase
+{
+	${0}
+}
+endsnippet
