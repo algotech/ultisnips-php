@@ -11,6 +11,19 @@ class `!p snip.rv = snip.basename or "ClassName"` extends \PHPUnit_Framework_Tes
 }
 endsnippet
 
+snippet sfwebtest "Symfony2 / PHPUnit / Web Test Case" b
+<?php
+
+namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
+
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+
+class `!p snip.rv = snip.basename or "ClassName"` extends WebTestCase
+{
+	${0}
+}
+endsnippet
+
 snippet sfmock "Symfony2 / PHPUnit / Mock Builder"
 \$this
     ->getMockBuilder('${1}')
