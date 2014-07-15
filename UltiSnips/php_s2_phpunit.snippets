@@ -10,3 +10,18 @@ class `!p snip.rv = snip.basename or "ClassName"` extends \PHPUnit_Framework_Tes
 	${0}
 }
 endsnippet
+
+snippet sfmock "Symfony2 / PHPUnit / Mock Builder"
+\$this
+    ->getMockBuilder('${1}')
+    ->setMethods(array(${2}))
+    ->disableOriginalConstructor()
+    ->getMock()${0}
+endsnippet
+
+snippet sfexpects "Symfony2 / PHPUnit / Mock Builder"
+->expects($this->${1:once}())
+->method('${2}')
+->with(\$this->equalTo(${3}))
+->will(\$this->returnValue(${4}))${0}
+endsnippet
