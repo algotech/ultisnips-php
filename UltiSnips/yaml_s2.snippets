@@ -11,7 +11,7 @@ endsnippet
 
 snippet sfservice "Symfony2 / YAML / Service" b
 ${1:service_name}:
-    class: ${2}
+    class: ${2:%$1.class%}
     arguments:
         - ${3}
 endsnippet
