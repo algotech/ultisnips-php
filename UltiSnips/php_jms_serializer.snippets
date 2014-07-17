@@ -1,0 +1,41 @@
+priority -50
+
+snippet jmshandler "JMSSerializerBundle / Handler subscriber" b
+<?php
+
+namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
+
+use JMS\Serializer\Handler\SubscribingHandlerInterface;
+use JMS\Serializer\GraphNavigator;
+use JMS\Serializer\JsonSerializationVisitor;
+use JMS\Serializer\JsonDeserializationVisitor;
+use JMS\Serializer\Context;
+
+class `!p snip.rv = snip.basename or "HandlerClass"` implements SubscribingHandlerInterface
+{
+    /**
+     * {@inheritdoc}
+     */
+    public static function getSubscribingMethods()
+    {
+        return array(
+			${1:jmsdeserializesubscribe}
+        );
+    }${0}
+}
+endsnippet
+
+snippet jmsdeserializesubscribe "JMSSerializerBundle / Handler subscriber / Deserialize subscriber" b
+array(
+    'direction' => GraphNavigator::DIRECTION_DESERIALIZATION,
+    'format' => '${1:json}',
+    'type' => '${2}',
+),${0}
+endsnippet
+
+snippet jmsdeserialize "JMSSerializerBundle / Handler subscriber / Deserialize method" b
+public function deserialize${1:Type}From${2:Json}(JsonDeserializationVisitor $visitor, array $obj, array $type, Context $context)
+{
+	return ${0}
+}
+endsnippet
