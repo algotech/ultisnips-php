@@ -32,9 +32,16 @@ snippet sfmock "Symfony2 / PHPUnit / Mock Builder"
     ->getMock()${0}
 endsnippet
 
-snippet sfexpects "Symfony2 / PHPUnit / Mock Builder"
+snippet sfexpects "Symfony2 / PHPUnit / Expects"
 ->expects($this->${1:once}())
 ->method('${2}')
 ->with(\$this->equalTo(${3}))
-->will(\$this->returnValue(${4}))${0}
+->will(\$this->${4:returnValue}(${5}))${0}
+endsnippet
+
+snippet sfexpectsat "Symfony2 / PHPUnit / Expects at"
+->expects($this->at(${1:0}))
+->method('${2}')
+->with(\$this->equalTo(${3}))
+->will(\$this->${4:returnValue}(${5}))${0}
 endsnippet
