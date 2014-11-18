@@ -26,3 +26,27 @@ public function set${1/\w+\s*/\u$0/}(${4:$2 }$$1)
     return \$this;
 }${0}
 endsnippet
+
+snippet pub "Public function" b
+public function ${1:name}(${2:$param})
+{
+	${VISUAL}${5:return null;}
+}
+$0
+endsnippet
+
+snippet pro "Protected function" b
+protected function ${1:name}(${2:$param})
+{
+	${VISUAL}${5:return null;}
+}
+$0
+endsnippet
+
+snippet pri "Private function" b
+private function ${1:name}(${2:$param})
+{
+	${VISUAL}${5:return null;}
+}
+$0
+endsnippet
