@@ -32,6 +32,14 @@ snippet sfmock "Symfony2 / PHPUnit / Mock Builder"
     ->getMock()${0}
 endsnippet
 
+snippet sfmockp "Symfony2 / PHPUnit / Mock Builder Partial"
+\$this
+    ->getMockBuilder('${1}')
+    ->setConstructorArgs(array(${2}))
+    ->setMethods(array(${3}))
+    ->getMock()${0}
+endsnippet
+
 snippet sfexpects "Symfony2 / PHPUnit / Expects"
 ->expects($this->${1:once}())
 ->method('${2}')
