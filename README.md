@@ -1,7 +1,7 @@
 ultisnips-symfony2
 ==================
 
-A vim bundle with snippets for symfony developers
+A vim bundle with snippets for *Symfony2* developers
 
 Required bundles:
  - [ultisnips](https://github.com/SirVer/ultisnips)
