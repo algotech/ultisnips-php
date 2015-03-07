@@ -232,7 +232,6 @@ public function customAction(Request $request)
 
 ```php
 return $this->render('Bundle:Folder:file.html.twig', array());
-);
 ```
 
 `sfforward`
