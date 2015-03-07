@@ -10,6 +10,24 @@ It contains snippets for the following tools:
 Required bundles:
  - [ultisnips](https://github.com/SirVer/ultisnips)
 
+## Installation
+
+### Install with [vundle](https://github.com/gmarik/vundle)
+
+Add to vimrc:
+
+    Plugin "algotech/ultisnips-php"
+
+And install it:
+
+    :so ~/.vimrc
+    :PluginInstall
+
+### Install with [pathogen](https://github.com/tpope/vim-pathogen)
+
+      cd ~/.vim/bundle
+      git clone https://github.com/algotech/ultisnips-php.git
+
 [php-website]: http://php.net
 [phpunit-website]: https://phpunit.de
 [symfony2-website]: http://symfony.com
