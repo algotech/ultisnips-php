@@ -1,5 +1,33 @@
 # PHP snippets for vim #
 
+### Classes ###
+
+`class`
+
+```php
+<?php
+
+namespace AlgoTech;
+
+class ClassName
+{
+
+}
+```
+
+`interface`
+
+```php
+<?php
+
+namespace AlgoTech;
+
+interface InterfaceName
+{
+
+}
+```
+
 ### Generic methods ###
 
 `pub`
