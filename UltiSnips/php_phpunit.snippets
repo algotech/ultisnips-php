@@ -1,6 +1,6 @@
 priority -40
 
-snippet sftest "Symfony2 / PHPUnit / Test Case" b
+snippet putest "PHPUnit / Test Case" b
 <?php
 
 namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
@@ -11,20 +11,7 @@ class `!p snip.rv = snip.basename or "ClassName"` extends \PHPUnit_Framework_Tes
 }
 endsnippet
 
-snippet sfwebtest "Symfony2 / PHPUnit / Web Test Case" b
-<?php
-
-namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
-
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-
-class `!p snip.rv = snip.basename or "ClassName"` extends WebTestCase
-{
-	${0}
-}
-endsnippet
-
-snippet sfmock "Symfony2 / PHPUnit / Mock Builder"
+snippet pumock "PHPUnit / Mock Builder"
 \$this
     ->getMockBuilder('${1}')
     ->setMethods(array(${2}))
@@ -32,7 +19,7 @@ snippet sfmock "Symfony2 / PHPUnit / Mock Builder"
     ->getMock()${0}
 endsnippet
 
-snippet sfmockp "Symfony2 / PHPUnit / Mock Builder Partial"
+snippet pumockp "PHPUnit / Mock Builder Partial"
 \$this
     ->getMockBuilder('${1}')
     ->setConstructorArgs(array(${2}))
@@ -40,14 +27,14 @@ snippet sfmockp "Symfony2 / PHPUnit / Mock Builder Partial"
     ->getMock()${0}
 endsnippet
 
-snippet sfexpects "Symfony2 / PHPUnit / Expects"
+snippet puexpects "PHPUnit / Expects"
 ->expects($this->${1:once}())
 ->method('${2}')
 ->with(\$this->equalTo(${3}))
 ->will(\$this->${4:returnValue}(${5}))${0}
 endsnippet
 
-snippet sfexpectsat "Symfony2 / PHPUnit / Expects at"
+snippet puexpectsat "PHPUnit / Expects at"
 ->expects($this->at(${1:0}))
 ->method('${2}')
 ->with(\$this->equalTo(${3}))

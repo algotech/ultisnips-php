@@ -87,33 +87,6 @@ class Configuration implements ConfigurationInterface
     }
 }
 ```
-### Class ###
-
-`sfclass`
-
-```php
-<?php
-
-namespace Wee\DefaultBundle\Class;
-
-class CustomClass
-{
-
-}
-```
-
-`sfinterface`
-
-```php
-<?php
-
-namespace Wee\DefaultBundle\Class;
-
-interface CustomInterface
-{
-
-}
-```
 
 ### Command ###
 

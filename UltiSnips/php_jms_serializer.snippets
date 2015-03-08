@@ -5,11 +5,11 @@ snippet jmshandler "JMSSerializerBundle / Handler subscriber" b
 
 namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
 
-use JMS\Serializer\Handler\SubscribingHandlerInterface;
-use JMS\Serializer\GraphNavigator;
-use JMS\Serializer\JsonSerializationVisitor;
-use JMS\Serializer\JsonDeserializationVisitor;
 use JMS\Serializer\Context;
+use JMS\Serializer\GraphNavigator;
+use JMS\Serializer\Handler\SubscribingHandlerInterface;
+use JMS\Serializer\JsonDeserializationVisitor;
+use JMS\Serializer\JsonSerializationVisitor;
 
 class `!p snip.rv = snip.basename or "HandlerClass"` implements SubscribingHandlerInterface
 {
@@ -34,8 +34,12 @@ array(
 endsnippet
 
 snippet jmsdeserialize "JMSSerializerBundle / Handler subscriber / Deserialize method" b
-public function deserialize${1:Type}From${2:Json}(JsonDeserializationVisitor $visitor, array $obj, array $type, Context $context)
-{
+public function deserialize${1:Type}From${2:Json}(
+    JsonDeserializationVisitor $visitor,
+	array $obj,
+	array $type,
+	Context $context
+) {
 	return ${0}
 }
 endsnippet

@@ -1,6 +1,6 @@
 priority -40
 
-snippet sfget "Symfony2 / Method / Getter" b
+snippet get "Method / Getter" b
 /**
  * Get ${1}
  *
@@ -12,7 +12,7 @@ public function get${1/\w+\s*/\u$0/}()
 }${0}
 endsnippet
 
-snippet sfset "Symfony2 / Method / Setter" b
+snippet set "Method / Setter" b
 /**
  * Set ${1}
  *
@@ -27,7 +27,7 @@ public function set${1/\w+\s*/\u$0/}(${4:$2 }$$1)
 }${0}
 endsnippet
 
-snippet pub "Public function" b
+snippet pub "Public method" b
 public function ${1:name}(${2:$param})
 {
 	${VISUAL}${5:return null;}
@@ -35,7 +35,7 @@ public function ${1:name}(${2:$param})
 $0
 endsnippet
 
-snippet pro "Protected function" b
+snippet pro "Protected method" b
 protected function ${1:name}(${2:$param})
 {
 	${VISUAL}${5:return null;}
@@ -43,7 +43,7 @@ protected function ${1:name}(${2:$param})
 $0
 endsnippet
 
-snippet pri "Private function" b
+snippet pri "Private method" b
 private function ${1:name}(${2:$param})
 {
 	${VISUAL}${5:return null;}
