@@ -1,5 +1,10 @@
 # PHPUnit snippets for vim #
 
+- [Classes](#classes)
+- [Mockings](#mockings)
+- [Expectations](#expectations)
+- [Back to main page](../README.md)
+
 All shortcuts start with the `pu` prefix and are both short and intuitive:
 
 ### Classes ###

@@ -1,5 +1,10 @@
 # PHP snippets for vim #
 
+- [Classes](#classes)
+- [Generic methods](#generic-methods)
+- [Getters and setters](#getters-and-setters)
+- [Back to main page](../README.md)
+
 ### Classes ###
 
 `class`

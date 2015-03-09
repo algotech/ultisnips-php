@@ -1,5 +1,15 @@
 # Symfony2 snippets for vim #
 
+- [Bundle](#bundle)
+- [Command](#command)
+- [Controller](#controller)
+- [Doctrine](#doctrine)
+- [Form](#form)
+- [Twig](#twig)
+- [Validator](#validator)
+- [YML](#yml)
+- [Back to main page](../README.md)
+
 All shortcuts start with the `sf` prefix and are both short and intuitive:
 
 ### Bundle ###

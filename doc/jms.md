@@ -1,5 +1,8 @@
 # JMSSerializerBundle snippets for vim #
 
+- [Handlers](#handlers)
+- [Back to main page](../README.md)
+
 All shortcuts start with the `jms` prefix and are both short and intuitive:
 
 ### Handlers ###
