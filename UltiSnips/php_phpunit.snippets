@@ -5,6 +5,12 @@ snippet putest "PHPUnit / Test Case" b
 
 namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
 
+/**
+ * Class: `!p snip.rv = snip.basename or "ClassName"`
+ *
+ * @see https://phpunit.de/manual/4.5/en/writing-tests-for-phpunit.html
+ * @see \PHPUnit_Framework_TestCase
+ */
 class `!p snip.rv = snip.basename or "ClassName"` extends \PHPUnit_Framework_TestCase
 {
 	${0}
@@ -19,7 +25,7 @@ snippet pumock "PHPUnit / Mock Builder"
     ->getMock()${0}
 endsnippet
 
-snippet pumockp "PHPUnit / Mock Builder Partial"
+snippet pumockpartial "PHPUnit / Mock Builder Partial"
 \$this
     ->getMockBuilder('${1}')
     ->setConstructorArgs(array(${2}))

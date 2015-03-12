@@ -1,12 +1,18 @@
 priority -40
 
-snippet sfcontraint "Symfony2 / Validator / Constraint" b
+snippet sfconstraint "Symfony2 / Validator / Constraint" b
 <?php
 
 namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
 
 use Symfony\Component\Validator\Constraint;
 
+/**
+ * Class: `!p snip.rv = snip.basename or "ConstraintClass"`
+ *
+ * @see http://symfony.com/doc/current/cookbook/validation/custom_constraint.html
+ * @see Constraint
+ */
 class `!p snip.rv = snip.basename or "ConstraintClass"` extends Constraint
 {
     public \$message = '${1}';
@@ -21,6 +27,12 @@ namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 
+/**
+ * Class: `!p snip.rv = snip.basename or "ValidatorClass"`
+ *
+ * @see http://symfony.com/doc/current/cookbook/validation/custom_constraint.html
+ * @see ConstraintValidator
+ */
 class `!p snip.rv = snip.basename or "ValidatorClass"` extends ConstraintValidator
 {
     public function validate(\$value, Constraint \$constraint)

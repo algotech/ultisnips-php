@@ -7,6 +7,12 @@ namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w
 
 use Doctrine\ORM\EntityRepository;
 
+/**
+ * Class: `!p snip.rv = snip.basename or "RepositoryClass"`
+ *
+ * @see http://symfony.com/doc/current/book/doctrine.html
+ * @see EntityRepository
+ */
 class `!p snip.rv = snip.basename or "RepositoryClass"` extends EntityRepository
 {${0}
 }
@@ -21,8 +27,12 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
+ * Class: `!p snip.rv = snip.basename or "EntityClass"`
+ *
  * @ORM\Entity(${1:repositoryClass="${2}"})
  * @ORM\Table(name="${3}")
+
+ * @see http://symfony.com/doc/current/book/doctrine.html
  */
 class `!p snip.rv = snip.basename or "EntityClass"`
 {

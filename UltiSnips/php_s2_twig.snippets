@@ -5,6 +5,12 @@ snippet sftwigextension "Symfony2 / Twig / Extension Class" b
 
 namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
 
+/**
+ * Class: `!p snip.rv = snip.basename or "TwigExtensionClass"`
+ *
+ * @see http://symfony.com/doc/current/cookbook/templating/twig_extension.html
+ * @see \Twig_Extension
+ */
 class `!p snip.rv = snip.basename or "TwigExtensionClass"` extends \Twig_Extension
 {
     /**
