@@ -19,11 +19,17 @@ All shortcuts start with the `sf` prefix and are both short and intuitive:
 ```php
 <?php
 
-namespace Wee\DefaultBundle;
+namespace AlgoTech\MainBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class WeeDefaultBundle extends Bundle
+/**
+ * Class: AlgoTechMainBundle
+ *
+ * @see http://symfony.com/doc/current/cookbook/bundles/best_practices.html
+ * @see Bundle
+ */
+class AlgoTechMainBundle extends Bundle
 {
 }
 ```
@@ -71,17 +77,19 @@ class WeeDefaultBundleExtension extends Extension
 ```php
 <?php
 
-namespace Wee\DefaultBundle\DependencyInjection;
+namespace AlgoTech\MainBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 /**
+ * Class: Configuration
+ *
  * This is the class that validates and merges configuration
  * from your app/config files.
  *
- * To learn more see
- * {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
+ * @see http://symfony.com/doc/current/cookbook/bundles/extension.html
+ * @see ConfigurationInterface
  */
 class Configuration implements ConfigurationInterface
 {
@@ -91,7 +99,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('wee_default');
+        $rootNode = $treeBuilder->root('algotech_main');
 
         return $treeBuilder;
     }
@@ -105,12 +113,18 @@ class Configuration implements ConfigurationInterface
 ```php
 <?php
 
-namespace Wee\DefaultBundle\Command;
+namespace AlgoTech\MainBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
+/**
+ * Class: CustomCommand
+ *
+ * @see http://symfony.com/doc/current/cookbook/console/console_command.html
+ * @see ContainerAwareCommand
+ */
 class CustomCommand extends ContainerAwareCommand
 {
     /**
@@ -139,12 +153,18 @@ class CustomCommand extends ContainerAwareCommand
 ```php
 <?php
 
-namespace Wee\DefaultBundle\Command;
+namespace AlgoTech\MainBundle\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
+/**
+ * Class: CustomCommand
+ *
+ * @see http://symfony.com/doc/current/cookbook/console/console_command.html
+ * @see Command
+ */
 class CustomCommand extends Command
 {
     /**
@@ -175,11 +195,17 @@ class CustomCommand extends Command
 ```php
 <?php
 
-namespace Wee\DefaultBundle\Controller;
+namespace AlgoTech\MainBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * Class: DefaultController
+ *
+ * @see http://symfony.com/doc/current/book/controller.html
+ * @see Controller
+ */
 class DefaultController extends Controller
 {
     public function indexAction(Request $request)
@@ -195,13 +221,19 @@ class DefaultController extends Controller
 ```php
 <?php
 
-namespace Wee\DefaultBundle\Controller;
+namespace AlgoTech\MainBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * Class: DefaultController
+ *
+ * @see http://symfony.com/doc/current/book/controller.html
+ * @see Controller
+ */
 class DefaultController extends Controller
 {
     /**
@@ -248,7 +280,7 @@ return $this->render('Bundle:Folder:file.html.twig', array());
 
 ```php
 $this->forward(
-    'Default:Controller:index',
+    'Bundle:Controller:action',
     array()
 );
 ```
@@ -271,10 +303,16 @@ $this->redirect(
 ```php
 <?php
 
-namespace Wee\DefaultBundle\Repository;
+namespace AlgoTech\MainBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 
+/**
+ * Class: CustomRepository
+ *
+ * @see http://symfony.com/doc/current/book/doctrine.html
+ * @see EntityRepository
+ */
 class CustomRepository extends EntityRepository
 {
 }
@@ -285,16 +323,20 @@ class CustomRepository extends EntityRepository
 ```php
 <?php
 
-namespace Wee\DefaultBundle\Entity;
+namespace AlgoTech\MainBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
+ * Class: CustomEntity
+ *
  * @ORM\Entity()
- * @ORM\Table(name="main_defaults")
+ * @ORM\Table()
+
+ * @see http://symfony.com/doc/current/book/doctrine.html
  */
-class Default
+class CustomEntity
 {
     /**
      * @ORM\Id()
@@ -321,12 +363,18 @@ protected $column;
 ```php
 <?php
 
-namespace Wee\DefaultBundle\Form\Type;
+namespace AlgoTech\MainBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
+/**
+ * Class: CustomType
+ *
+ * @see http://symfony.com/doc/current/book/forms.html
+ * @see AbstractType
+ */
 class CustomType extends AbstractType
 {
     /**
@@ -362,13 +410,19 @@ class CustomType extends AbstractType
 ```php
 <?php
 
-namespace Wee\DefaultBundle\Form\Transformer;
+namespace AlgoTech\MainBundle\Form\Transformer;
 
 use Symfony\Component\Form\DataTransformerInterface;
 use Symfony\Component\Form\Exception\UnexpectedTypeException;
 use Symfony\Component\Form\Exception\TransformationFailedException;
 
-class CustomDataTransformer extends AbstractType
+/**
+ * Class: CustomDataTransformer
+ *
+ * @see http://symfony.com/doc/current/cookbook/form/data_transformers.html
+ * @see DataTransformerInterface
+ */
+class CustomDataTransformer implements DataTransformerInterface
 {
     /**
      * {@inheritdoc}
@@ -395,8 +449,14 @@ class CustomDataTransformer extends AbstractType
 ```php
 <?php
 
-namespace Wee\DefaultBundle\Twig;
+namespace AlgoTech\MainBundle\Twig;
 
+/**
+ * Class: AppExtension
+ *
+ * @see http://symfony.com/doc/current/cookbook/templating/twig_extension.html
+ * @see \Twig_Extension
+ */
 class AppExtension extends \Twig_Extension
 {
     /**
@@ -427,18 +487,24 @@ class AppExtension extends \Twig_Extension
 
 ### Validator ###
 
-`sfcontraint`
+`sfconstraint`
 
 ```php
 <?php
 
-namespace Wee\DefaultBundle\Validator\Constraint;
+namespace AlgoTech\MainBundle\Validator\Constraint;
 
 use Symfony\Component\Validator\Constraint;
 
+/**
+ * Class: CustomConstraint
+ *
+ * @see http://symfony.com/doc/current/cookbook/validation/custom_constraint.html
+ * @see Constraint
+ */
 class CustomConstraint extends Constraint
 {
-    public $message = 'Custom';
+    public $message = '';
 }
 ```
 
@@ -447,12 +513,18 @@ class CustomConstraint extends Constraint
 ```php
 <?php
 
-namespace Wee\DefaultBundle\Validator\Constraint;
+namespace AlgoTech\MainBundle\Validator\Constraint;
 
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 
-class CustomValidator extends ConstraintValidator
+/**
+ * Class: CustomConstraintValidator
+ *
+ * @see http://symfony.com/doc/current/cookbook/validation/custom_constraint.html
+ * @see ConstraintValidator
+ */
+class CustomConstraintValidator extends ConstraintValidator
 {
     public function validate($value, Constraint $constraint)
     {

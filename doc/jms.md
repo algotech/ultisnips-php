@@ -20,6 +20,12 @@ use JMS\Serializer\Handler\SubscribingHandlerInterface;
 use JMS\Serializer\JsonDeserializationVisitor;
 use JMS\Serializer\JsonSerializationVisitor;
 
+/**
+ * Class: JMSCustomHandler
+ *
+ * @see http://jmsyst.com/libs/serializer/master/handlers
+ * @see SubscribingHandlerInterface
+ */
 class JMSCustomHandler implements SubscribingHandlerInterface
 {
     /**
