@@ -1,5 +1,10 @@
 # PHPUnit snippets for vim #
 
+- [Classes](#classes)
+- [Mockings](#mockings)
+- [Expectations](#expectations)
+- [Back to main page](../README.md)
+
 All shortcuts start with the `pu` prefix and are both short and intuitive:
 
 ### Classes ###
@@ -11,6 +16,12 @@ All shortcuts start with the `pu` prefix and are both short and intuitive:
 
 namespace AlgoTech\MainBundle\Tests;
 
+/**
+ * Class: CustomTest
+ *
+ * @see https://phpunit.de/manual/4.5/en/writing-tests-for-phpunit.html
+ * @see \PHPUnit_Framework_TestCase
+ */
 class CustomTest extends \PHPUnit_Framework_TestCase
 {
 
@@ -29,7 +40,7 @@ $this
     ->getMock()
 ```
 
-`pumockp`
+`pumockpartial`
 
 ```php
 $this
@@ -56,5 +67,5 @@ $this
 ->expects($this->at(0))
 ->method('method')
 ->with($this->equalTo('something'))
-->will($this->returnValue(true))
+->will($this->returnValue(null))
 ```

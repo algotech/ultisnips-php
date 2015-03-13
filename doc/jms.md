@@ -1,5 +1,8 @@
 # JMSSerializerBundle snippets for vim #
 
+- [Handlers](#handlers)
+- [Back to main page](../README.md)
+
 All shortcuts start with the `jms` prefix and are both short and intuitive:
 
 ### Handlers ###
@@ -17,6 +20,12 @@ use JMS\Serializer\Handler\SubscribingHandlerInterface;
 use JMS\Serializer\JsonDeserializationVisitor;
 use JMS\Serializer\JsonSerializationVisitor;
 
+/**
+ * Class: JMSCustomHandler
+ *
+ * @see http://jmsyst.com/libs/serializer/master/handlers
+ * @see SubscribingHandlerInterface
+ */
 class JMSCustomHandler implements SubscribingHandlerInterface
 {
     /**

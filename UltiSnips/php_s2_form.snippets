@@ -9,6 +9,12 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
+/**
+ * Class: `!p snip.rv = snip.basename or "FormTypeClass"`
+ *
+ * @see http://symfony.com/doc/current/book/forms.html
+ * @see AbstractType
+ */
 class `!p snip.rv = snip.basename or "FormTypeClass"` extends AbstractType
 {
     /**
@@ -50,7 +56,13 @@ use Symfony\Component\Form\DataTransformerInterface;
 use Symfony\Component\Form\Exception\UnexpectedTypeException;
 use Symfony\Component\Form\Exception\TransformationFailedException;
 
-class `!p snip.rv = snip.basename or "TransformerClass"` extends AbstractType
+/**
+ * Class: `!p snip.rv = snip.basename or "TransformerClass"`
+ *
+ * @see http://symfony.com/doc/current/cookbook/form/data_transformers.html
+ * @see DataTransformerInterface
+ */
+class `!p snip.rv = snip.basename or "TransformerClass"` implements DataTransformerInterface
 {
     /**
      * {@inheritdoc}
