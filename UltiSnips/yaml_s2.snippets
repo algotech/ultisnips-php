@@ -2,16 +2,16 @@ priority -40
 
 snippet sfroute "Symfony2 / YAML / Route" b
 ${1:route_name}:
-    path: ${2:/}
-    defaults:
-        _controller: ${3:Bundle:Controller:action}
-    requirements:
-        _method: ${4:GET|POST}
+	path: ${2:/}
+	defaults:
+		_controller: ${3:Bundle:Controller:action}
+	requirements:
+		_method: ${4:GET|POST}
 endsnippet
 
 snippet sfservice "Symfony2 / YAML / Service" b
 ${1:service_name}:
-    class: ${2:%$1.class%}
-    arguments:
-        - ${3}
+	class: ${2:%$1.class%}
+	arguments:
+		- ${3}
 endsnippet

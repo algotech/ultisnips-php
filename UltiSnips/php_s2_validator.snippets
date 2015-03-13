@@ -15,7 +15,7 @@ use Symfony\Component\Validator\Constraint;
  */
 class `!p snip.rv = snip.basename or "ConstraintClass"` extends Constraint
 {
-    public \$message = '${1}';
+	public \$message = '${1}';
 }
 endsnippet
 
@@ -35,9 +35,9 @@ use Symfony\Component\Validator\ConstraintValidator;
  */
 class `!p snip.rv = snip.basename or "ValidatorClass"` extends ConstraintValidator
 {
-    public function validate(\$value, Constraint \$constraint)
-    {
-        ${1}
-    }
+	public function validate(\$value, Constraint \$constraint)
+	{
+		${1}
+	}
 }
 endsnippet

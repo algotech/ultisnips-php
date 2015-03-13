@@ -13,28 +13,28 @@ namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w
  */
 class `!p snip.rv = snip.basename or "TwigExtensionClass"` extends \Twig_Extension
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getFilters()
-    {
-        return array();
-    }
+	/**
+	 * {@inheritdoc}
+	 */
+	public function getFilters()
+	{
+		return array();
+	}
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getFunctions()
-    {
-        return array();
-    }
+	/**
+	 * {@inheritdoc}
+	 */
+	public function getFunctions()
+	{
+		return array();
+	}
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getName()
-    {
-        return '${1:extension_name}';
-    }
+	/**
+	 * {@inheritdoc}
+	 */
+	public function getName()
+	{
+		return '${1:extension_name}';
+	}
 }
 endsnippet

@@ -19,18 +19,18 @@ endsnippet
 
 snippet pumock "PHPUnit / Mock Builder"
 \$this
-    ->getMockBuilder('${1}')
-    ->setMethods(array(${2}))
-    ->disableOriginalConstructor()
-    ->getMock()${0}
+	->getMockBuilder('${1}')
+	->setMethods(array(${2}))
+	->disableOriginalConstructor()
+	->getMock()${0}
 endsnippet
 
 snippet pumockpartial "PHPUnit / Mock Builder Partial"
 \$this
-    ->getMockBuilder('${1}')
-    ->setConstructorArgs(array(${2}))
-    ->setMethods(array(${3}))
-    ->getMock()${0}
+	->getMockBuilder('${1}')
+	->setConstructorArgs(array(${2}))
+	->setMethods(array(${3}))
+	->getMock()${0}
 endsnippet
 
 snippet puexpects "PHPUnit / Expects"
