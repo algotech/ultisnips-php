@@ -359,6 +359,89 @@ class CustomEntity
 protected $column;
 ```
 
+`sfotou`
+
+```php
+/**
+ * @ORM\OneToOne(targetEntity="Entity")
+ */
+protected $name;
+```
+
+`sfoto`
+
+```php
+/**
+ * @ORM\OneToOne(targetEntity="Entity", inversedBy="property")
+ */
+protected $name;
+```
+
+`sfotoi`
+
+```php
+/**
+ * @ORM\OneToOne(targetEntity="Entity", mappedBy="property")
+ */
+protected $name;
+```
+
+`sfotm`
+
+```php
+/**
+ * @ORM\OneToMany(targetEntity="Entity", mappedBy="property")
+ */
+protected $name;
+```
+
+`sfmtou`
+
+```php
+/**
+ * @ORM\ManyToOne(targetEntity="Entity")
+ */
+protected $name;
+```
+
+`sfmto`
+
+```php
+/**
+ * @ORM\ManyToOne(targetEntity="Entity", inversedBy="property")
+ */
+protected $name;
+```
+
+`sfmtmu`
+
+```php
+/**
+ * @ORM\ManyToMany(targetEntity="Entity")
+ * @ORM\JoinTable(name="join_table_name")
+ */
+protected $name;
+```
+
+`sfmtm`
+
+```php
+/**
+ * @ORM\ManyToMany(targetEntity="Entity", inversedBy="property")
+ * @ORM\JoinTable(name="join_table_name")
+ */
+protected $name;
+```
+
+`sfmtmi`
+
+```php
+/**
+ * @ORM\ManyToMany(targetEntity="Entity", mappedBy="property")
+ */
+protected $name;
+```
+
 ### Form ###
 
 `sfform`
