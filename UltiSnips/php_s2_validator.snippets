@@ -3,7 +3,7 @@ priority -40
 snippet sfconstraint "Symfony2 / Validator / Constraint" b
 <?php
 
-namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
+namespace `!v ultisnips_php#resolve_namespace()`;
 
 use Symfony\Component\Validator\Constraint;
 
@@ -22,7 +22,7 @@ endsnippet
 snippet sfvalidator "Symfony2 / Validator Class" b
 <?php
 
-namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
+namespace `!v ultisnips_php#resolve_namespace()`;
 
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;

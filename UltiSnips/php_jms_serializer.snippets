@@ -3,7 +3,7 @@ priority -40
 snippet jmshandler "JMSSerializerBundle / Handler subscriber" b
 <?php
 
-namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
+namespace `!v ultisnips_php#resolve_namespace()`;
 
 use JMS\Serializer\Context;
 use JMS\Serializer\GraphNavigator;
