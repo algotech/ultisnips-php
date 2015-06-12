@@ -28,6 +28,12 @@ And install it:
       cd ~/.vim/bundle
       git clone https://github.com/algotech/ultisnips-php.git
 
+## Configuration
+
+If you use the PSR-4 autoloading, then you can add a namespace prefix using `g:ultisnips_php_namespace_prefix`:
+    
+      let g:ultisnips_php_namespace_prefix = 'MyProject\Namespace'
+
 [php-website]: http://php.net
 [phpunit-website]: https://phpunit.de
 [symfony2-website]: http://symfony.com
