@@ -27,6 +27,14 @@ public function set${1/\w+\s*/\u$0/}(${4:$2 }$$1)
 }${0}
 endsnippet
 
+snippet sta "Public static method" b
+public static function ${1:name}(${2:$param})
+{
+	${VISUAL}${5:return null;}
+}
+$0
+endsnippet
+
 snippet pub "Public method" b
 public function ${1:name}(${2:$param})
 {
