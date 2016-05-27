@@ -44,6 +44,15 @@ public function name($param)
 }
 ```
 
+`sta`
+
+```php
+public static function name($param)
+{
+    return null;
+}
+```
+
 `pro`
 
 ```php
