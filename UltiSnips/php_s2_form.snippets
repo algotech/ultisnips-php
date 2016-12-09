@@ -3,7 +3,7 @@ priority -40
 snippet sfform "Symfony2 / Form / Form Type" b
 <?php
 
-namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
+namespace `!v ultisnips_php#resolve_namespace()`;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -50,7 +50,7 @@ endsnippet
 snippet sfdatatransformer "Symfony2 / Form / Data Transformer" b
 <?php
 
-namespace `!v substitute(substitute(substitute(expand("%:p"), '\v(.*\/\U+)((\/\w+)+)\/\w+.php$', '\2', ''), '\/', '\\', 'g'), '\\', '', '')`;
+namespace `!v ultisnips_php#resolve_namespace()`;
 
 use Symfony\Component\Form\DataTransformerInterface;
 use Symfony\Component\Form\Exception\UnexpectedTypeException;
